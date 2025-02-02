@@ -9,20 +9,15 @@ placeholder=""
 for char in range(len(chosen_word)):
     placeholder += "_"
 
-display = list(placeholder)
+display = ""
 
 guess = input("Guess a letter:\n").lower()
 # TODO-2: Create a "display" that puts the guess letter in the right positions and _ in the rest of the string.
-counter = 0
 for letter in chosen_word:
-    print(f"The letter is: {letter}\n")
-    print(f"The index is: {counter}\n")
     if letter == guess:
-        display[counter] = letter
-        print("Right\n")
+        display += letter
+
     else:
-        print("Wrong")
-    print(f"The display is currently: {display}\n")
-    counter +=1
+        display += "_"
 
 
